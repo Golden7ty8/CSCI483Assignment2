@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.csci483.myprojectname.utils;
+package ca.csci483.CSCI483Assignment2.utils;
 
-import ca.csci483.myprojectname.model.User;
+import ca.csci483.CSCI483Assignment2.model.User;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;

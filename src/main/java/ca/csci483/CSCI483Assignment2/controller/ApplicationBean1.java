@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.csci483.myprojectname.controller;
+package ca.csci483.CSCI483Assignment2.controller;
 
 import java.io.File;
 import java.io.Serializable;
@@ -11,8 +11,8 @@ import javax.inject.Named;
 import javax.faces.context.FacesContext;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import ca.csci483.myprojectname.model.User;
-import ca.csci483.myprojectname.utils.DataUtils;
+import ca.csci483.CSCI483Assignment2.model.User;
+import ca.csci483.CSCI483Assignment2.utils.DataUtils;
 
 /**
  *

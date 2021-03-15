@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.csci483.myprojectname.model;
+package ca.csci483.CSCI483Assignment2.model;
 
 import java.io.Serializable;
 

@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.csci483.myprojectname.controller;
+package ca.csci483.CSCI483Assignment2.controller;
 
-import ca.csci483.myprojectname.utils.DataUtils;
-import ca.csci483.myprojectname.model.User;
+import ca.csci483.CSCI483Assignment2.utils.DataUtils;
+import ca.csci483.CSCI483Assignment2.model.User;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
