@@ -21,6 +21,11 @@ and open the template in the editor.
 
             <h:form>
                 <p:commandButton value="back" action="home" ></p:commandButton>
+
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Example" ></p:outputLabel>
+                    <p:inputText value="#{sessionBean1.myName}></p:inputText>
+                </p:panelGrid>
             </h:form>
 
         </ui:composition>
