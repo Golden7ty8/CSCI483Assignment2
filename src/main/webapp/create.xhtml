@@ -17,16 +17,57 @@ and open the template in the editor.
                         xmlns:ui="http://java.sun.com/jsf/facelets"
                         xmlns:h="http://java.sun.com/jsf/html"
                         xmlns:f="http://java.sun.com/jsf/core"
-                        xmlns:p="http://primefaces.org/ui">
+                        xmlns:p="http://primefaces.org/ui"
+                        template="/template/_template.xhtml">
 
-            <h:form>
-                <p:commandButton value="back" action="home" ></p:commandButton>
+            <ui:define name="centerpane">
+                <h:form>
+                    <p:commandButton value="back" action="home" ></p:commandButton>
 
-                <p:panelGrid columns="2">
-                    <p:outputLabel value="Example" ></p:outputLabel>
-                    <p:inputText value="#{sessionBean1.myName}></p:inputText>
-                </p:panelGrid>
-            </h:form>
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Publication Title:" ></p:outputLabel>
+                        <p:inputText value="#{sessionBean1.createReviewModel.publicationTitle}"></p:inputText>
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Publication URL:" ></p:outputLabel>
+                        <p:inputText value="#{sessionBean1.createReviewModel.publicationURL}"></p:inputText>
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Summary:" ></p:outputLabel>
+                        <p:inputTextarea rows="8" cols="60" value="#{sessionBean1.createReviewModel.summary}"/>
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Positives and Negatives:" ></p:outputLabel>
+                        <p:inputTextarea rows="8" cols="60" value="#{sessionBean1.createReviewModel.posAndNegs}"/>
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Major Points:" ></p:outputLabel>
+                        <p:inputTextarea rows="8" cols="60" value="#{sessionBean1.createReviewModel.majorPoints}"/>
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Minor Points:" ></p:outputLabel>
+                        <p:inputTextarea rows="8" cols="60" value="#{sessionBean1.createReviewModel.minorPoints}"/>
+                    </p:panelGrid>
+                    
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Recommendation:" ></p:outputLabel>
+                        <p:inputText value="#{sessionBean1.createReviewModel.recommendation}"/>
+                    </p:panelGrid>
+                    
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Reviewer Name:" ></p:outputLabel>
+                        <p:inputText value="#{sessionBean1.createReviewModel.revAuthor}"/>
+                    </p:panelGrid>
+
+                    <p:commandButton value="Submit" action="#{sessionBean1.submitButtonPressed()}"></p:commandButton>
+
+                </h:form>
+            </ui:define>
 
         </ui:composition>
 

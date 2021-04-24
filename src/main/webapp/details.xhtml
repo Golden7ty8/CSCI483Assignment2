@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div>TODO write content</div>
+
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:ui="http://java.sun.com/jsf/facelets"
+                        xmlns:h="http://java.sun.com/jsf/html"
+                        xmlns:f="http://java.sun.com/jsf/core"
+                        xmlns:p="http://primefaces.org/ui"
+                        template="/template/_template.xhtml">
+
+            <ui:define name="centerpane">
+                <h:form>
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Publication Title:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.publicationTitle}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Publication URL:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.publicationURL}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Summary:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.summary}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Positives and Negatives:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.posAndNegs}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Major Points:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.majorPoints}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+
+                    <p:panelGrid columns="1">
+                        <p:outputLabel value="Minor Points:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.minorPoints}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+                    
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Recommendation:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.recommendation}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+                    
+                    <p:panelGrid columns="2">
+                        <p:outputLabel value="Reviewer Name:" />
+                        <p:outputLabel value="#{sessionBean1.scoreReviewModel.revAuthor}"/>
+                        <p:outputLabel value="" />
+                    </p:panelGrid>
+                    
+                    <p:panelGrid columns="1">
+                        <p:outputLabel id="scoreDisplay" value="Average Score: #{sessionBean1.scoreReviewModel.avgScore} (#{sessionBean1.scoreReviewModel.scoreCount} scores)"/>
+                        <p:outputLabel value="Submit Score: "/>
+                        <p:inputText value="#{sessionBean1.scoreReviewModel.tmpScore}"/>
+                        <p:commandButton value="Submit" action="#{reviewList.addScore(sessionBean1.scoreReviewModel)}" update="scoreDisplay"/>
+                        <!--<p:commandButton value="Submit" action="#{sessionBean1.scoreReviewModel.addScore()}" update="scoreDisplay"/>-->
+                        <!--<p:commandButton value="Submit" action="#{sessionBean1.addScore()}" update="scoreDisplay"/>-->
+                    </p:panelGrid>
+                    
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+    </body>
+</html>

@@ -17,32 +17,36 @@ and open the template in the editor.
                         xmlns:ui="http://java.sun.com/jsf/facelets"
                         xmlns:h="http://java.sun.com/jsf/html"
                         xmlns:f="http://java.sun.com/jsf/core"
-                        xmlns:p="http://primefaces.org/ui">
+                        xmlns:p="http://primefaces.org/ui"
+                        template="/template/_template.xhtml">
 
-            <h:form>
-                <p:outputLabel value="score.xhtml "></p:outputLabel>
-                <p:commandButton value="back" action="home" ></p:commandButton>
+            <ui:define name="centerpane">
+                <h:form>
+                    <div class="card">
+                        <p:dataTable var="review" value="#{reviewList.reviews}">
+                            <p:column headerText="Publication Title">
+                                <h:outputText value="#{review.publicationTitle}" />
+                            </p:column>
 
-                <div class="card">
-                    <p:dataTable var="product" value="#{dtBasicView.products}">
-                        <p:column headerText="Code">
-                            <h:outputText value="#{product.code}" />
-                        </p:column>
+                            <!--<p:column headerText="Publication URL">
+                                <h:outputText value="#{review.publicationURL}" />
+                            </p:column>-->
+                            
+                            <p:column headerText="Average Score">
+                                <h:outputText value="#{review.avgScore}" />
+                            </p:column>
+                            
+                            <p:column headerText="Score Count">
+                                <h:outputText value="#{review.scoreCount}" />
+                            </p:column>
 
-                        <p:column headerText="Name">
-                            <h:outputText value="#{product.name}" />
-                        </p:column>
-
-                        <p:column headerText="Category">
-                            <h:outputText value="#{product.category}" />
-                        </p:column>
-
-                        <p:column headerText="Quantity">
-                            <h:outputText value="#{product.quantity}" />
-                        </p:column>
-                    </p:dataTable>
-                </div>
-            </h:form>
+                            <p:column headerText="View Details">
+                                <p:commandButton value="View" action="#{sessionBean1.viewDetailsButtonPressed(reviewList.getReview(review.listIndex))}"/>
+                            </p:column>
+                        </p:dataTable>
+                    </div>
+                </h:form>
+            </ui:define>
 
         </ui:composition>
     </body>

@@ -27,6 +27,11 @@
             <from-outcome>score</from-outcome>
             <to-view-id>/score.xhtml</to-view-id>
             <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>details</from-outcome>
+            <to-view-id>/details.xhtml</to-view-id>
+            <redirect/>
         </navigation-case>      
         <navigation-case>
             <from-outcome>genelist</from-outcome>

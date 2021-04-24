@@ -4,20 +4,12 @@
                 xmlns:p="http://primefaces.org/ui">
     <h:form>
         <p:menubar style="border:none; background: none; position:absolute; bottom: -4px; right:40px">
-            <p:menuitem style="padding-right: 20px;" value="Home" url="/CSCI483TemplateSite/home.xhtml" 
-                        icon="ui-icon-home"/> 
-            <p:menuitem style="padding-right: 20px;" url='/CSCI483TemplateSite/docs/FaqView.xhtml'  
-                        icon="ui-icon-help" value="FAQs" />             
-            <p:menuitem style="padding-right: 20px;" url='/CSCI483TemplateSite/docs/Tutorial.xhtml'
-                        icon="ui-icon-document" value="Tutorials"/>
-            <p:menuitem style="padding-right:20px;" value="Gallery" 
-                        icon="ui-icon-image"  url='/CSCI483TemplateSite/docs/Gallery.xhtml'/>   
-            <p:menuitem style="padding-right: 20px;" url='/CSCI483TemplateSite/docs/UpdateHistory.xhtml'
-                        icon="ui-icon-note" value="Updates" />  
-            <p:menuitem style="padding-right: 20px;" url='/CSCI483TemplateSite/docs/Resources.xhtml'  
-                        icon="ui-icon-pin-s" value="Resources" />  
-            <p:menuitem style="padding-right: 20px;" url='/CSCI483TemplateSite/docs/Contact.xhtml'
-                        icon="ui-icon-contact" value="Contact" />
+            <p:menuitem style="padding-right: 20px;" value="Home" action="home" 
+                        icon="ui-icon-home"/>
+            <p:menuitem style="padding-right: 20px;" action="create"
+                        icon="ui-icon-pin-s" value="Create New Review" />
+            <p:menuitem style="padding-right: 20px;" action="score"
+                        icon="ui-icon-note" value="Score Existing Review" />
         </p:menubar>
     </h:form>
     <p:dialog header="You are about to log off!"
